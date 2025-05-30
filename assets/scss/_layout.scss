@@ -1,0 +1,205 @@
+@use 'variable' as *;
+
+// html, body {
+//     font-family: 'Noto Sans TC', sans-serif !important; /* 使用 Google 字型 */
+// }
+* {
+  outline: 1px solid #333;
+}
+
+
+/* 共用 */
+.text-center{
+    text-align : center ;
+}
+
+/*header*/
+.header{
+    width: 100%;
+}
+.header-menu{    
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items : center;
+    font-size : 28px;
+    line-height: 150%;
+    font-weight : 700; 
+    gap : 24px; /* 項目間距 */
+}
+/*content*/
+img {
+    width: 416px;
+    height: 200px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 24px;    /* 上下間距32px，左右間距24px */
+    // justify-content: center;  /* 置中對齊 */
+    margin: 0 auto;
+    width: 1300px;
+    padding: 40px 0;    /* 上下留白 */
+}
+
+.blog-card {
+    width: 416px;
+    height: 476px;
+    gap: 8px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.blog-date {
+    font-size: $font-l;
+}
+
+.blog-tag {
+    font-size: 24px;
+    min-height: 36px;    
+}
+
+.blog-card-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    letter-spacing: 0;
+    color: #333;
+}
+
+.blog-card-content {
+    min-height: 48px;        /* 改用 min-height 確保至少有這個高度 */
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;        /* 1.5 * 16px = 24px 每行高度 */
+    margin-bottom: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;   /* 限制兩行 */
+    -webkit-box-orient: vertical;
+}
+
+.blog-button {
+    width: 96px;
+    height: 40px;             /* 預設高度 40px */
+    line-height: 40px;        /* 配合高度 */
+    color: #4B4B4B;
+    border-radius: 40px;      /* 圓角 */
+    text-decoration: none;
+    border: 1px solid #000000;
+    padding: 0 16px;          /* 只需要左右內邊距 */
+    text-align: center;       /* 文字置中 */
+    cursor: pointer;          /* 滑鼠指標變為手形 */
+}
+
+.small {
+    height: 36px;             /* 小按鈕高度 36px */
+    line-height: 36px;        /* 配合高度 */
+}
+
+.blog-button.blue {
+    color: #ffffff;
+    background-color: #0027D5;
+    border-color: #0027D5;    /* 邊框顏色也改為藍色 */
+}
+
+
+/*--footer*/
+.footer {
+    width: 100%;
+    height: 72px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size : $font-m;
+    line-height: 150%;
+}
+
+
+// /* 版面結構與佈局樣式（容器、網格、排版等）*/
+// .warp{
+//   width: 640px;
+//   margin: 0 auto;
+// }
+
+// .text-center{
+//     text-align : center ;
+// }
+
+// /* header */
+// .header{
+//   margin: 0 auto;
+//   padding: 10px;
+//   background-color: #ffffff;
+// }
+
+// .line{
+//   border: black solid 1px;
+// }
+
+
+// /* content內容 */
+// .content{
+//   display : flex ;;
+//   padding: 24px;
+//   background-color: #ffffff;
+// }
+
+// .content-text{
+//   display : block ; 
+// }
+
+// .content1{
+//   flex-direction :column ;
+//   padding-right: 20px;
+//   display: flex;
+//   background-color: #0240eb5e;
+// }
+
+
+// .content-left-img{
+//   height: 96px;
+//   width: 96px;
+// }
+
+// .content-right-img{
+//   height: 216px;
+//   width: 216px;
+// }
+
+// .content2{
+//   width: 288px;
+//   background-color: #0240eb5e;
+//   text-align: center;
+// }
+
+// .content2 p{
+//   font-size: 16px;
+//   line-height: 1.5;
+//   padding : 10px;
+  
+// }
+
+
+// .content3{
+//   padding-left : 20px;
+//   background-color: #0240eb5e;
+// }
+
+// /* footer */
+// .footer{
+//     height: 120px;
+// }
+
+// .footer p{
+//     font-size : 16px;
+//     line-height: 1.2;
+//     padding : 10px;
+// }

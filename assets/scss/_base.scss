@@ -1,0 +1,37 @@
+@use 'variable' as *; /* 使用variable內的變數 */
+
+// * {
+//   outline: 1px solid #333;
+// }
+
+
+
+// 載入字型
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+// 載入 Bootstrap icons
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+/* 全域、基礎樣式 */
+// body{
+//   font-family: $font-family-base;
+// }
+// .header {
+//   a{ 
+//   width: 500px;
+//   color: $link-color;
+//   }
+//   h1{
+//     font-size: $font-l;
+//   }
+// }
+// .content a{
+//   color: $link-color;
+// }
+// .content h2{
+//   font-family: $font-family-title;
+// }
+
+// .footer a{
+//   color: $link-color;
+// }
