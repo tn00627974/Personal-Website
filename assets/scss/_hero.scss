@@ -1,0 +1,42 @@
+@use 'variable' as *;
+.blog-banner {
+  display: flex;
+}
+
+.blog-banner-img {
+  width: 50%;
+}
+
+/* 右側背景圖區塊 */
+.hero-content {
+  width: 50%;
+//   height: 420px;
+  background-image: url('../images/desktop/index/Hero Section2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+//   align-items: center;
+  position: relative;
+}
+
+/* 文字區塊 */
+.hero-text {
+  padding-left: 60px;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 150%;
+  color: $text-blue-color;
+  margin-bottom: 16px;
+}
+
+.hero-subtitle {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 150%;
+  color: $text-blue-color;
+}
