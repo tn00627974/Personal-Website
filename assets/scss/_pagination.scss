@@ -1,0 +1,33 @@
+@use 'variable' as *;
+
+// 頁碼切換選單樣式
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0; /* 上下留白 */
+    
+    .page-list {
+        display: flex;
+        align-items: center;
+    }
+
+    .page-item {
+        list-style: none; /* 移除列表項目符號 */
+    }
+
+    .page-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 40px;
+        height: 40px;
+        font-size: $font-m;
+        color: #4B4B4B;
+        text-decoration: none;
+        // transition: all 0.3s ease; /* 平滑過渡效果 */
+        i {
+        font-size: 24px;
+        }
+    }
+}

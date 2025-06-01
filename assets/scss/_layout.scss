@@ -35,15 +35,6 @@
 }
 
 /*content*/
-.row{
-    display: flex;
-    flex-wrap: wrap; /* 允許換行 */
-    // justify-content: center;
-    // align-items : center;
-    // gap: 24px; /* 項目間距 */
-    // margin: 0 auto; /* 中央對齊 */
-    // width: 1300px; /* 設定寬度 */
-}
 .container{
     width: 1300px;    
     display: flex;
@@ -51,7 +42,6 @@
     margin-top: 60px;
     margin-bottom: 0px;
 }
-
 
 .blog-list {
     display: flex;
@@ -66,8 +56,8 @@
     width: 100%;
     gap: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
 }
 
 .blog-banner-img{
@@ -87,9 +77,39 @@
     gap: 12px;
 }
 
-
 /* Hero 區域樣式 */
+/* 右側背景圖區塊 */
+.hero-content {
+  width: 50%;
+  background-image: url('../images/desktop/index/Hero Section2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 
+/* 文字區塊 */
+.hero-text {
+  padding-left: 60px;
+  z-index: 1; /* 確保文字在背景圖上方 */
+}
+
+.hero-title {
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 150%;
+  color: $text-blue-color;
+  margin-bottom: 16px;
+}
+
+.hero-subtitle {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 150%;
+  color: $text-blue-color;
+}
 
 /* content 區域 2*/
 /* 特色卡片樣式 */
@@ -102,7 +122,7 @@
     padding: 0 32px;  /* 左右加點內距 */
     gap: 16px;
     font-size : $font-m;
-    
+    line-height: 150%;    
     .blog-card-content {
         margin-bottom: 0;
         width: 636px;
@@ -151,6 +171,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
+    line-height: 150%;
 }
 
 .blog-date {
@@ -167,7 +188,6 @@
     font-weight: 700;
     font-size: 28px;
     line-height: 150%;
-    // letter-spacing: 0;
     color: #333;
 }
 
@@ -183,16 +203,6 @@
     -webkit-line-clamp: 2;   /* 限制兩行 */
     -webkit-box-orient: vertical;
 }
-
-/* 關於區塊的特殊樣式 */
-.about-section {
-    background-color: #ffffff;
-    
-    .blog-banner-img {
-        width: 50%;  /* 左側圖片佔 50% */
-    }
-}
-
 
 
 .blog-button {
@@ -219,6 +229,30 @@
     border-color: $text-blue-color;    /* 邊框顏色也改為藍色 */
 }
 
+/* Email & links icons */
+.email-link-wapper {
+    text-decoration: none; /* 移除底線 */
+    font-size: $font-m;
+    height: 208px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px; /* 圖示與文字間距 */
+}
+
+.email{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 150%;
+    width: 1036px;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // gap: 4px; /* 圖示間距 */
+}
 
 /*--footer*/
 .footer {
@@ -232,4 +266,6 @@
     font-size : $font-m;
     line-height: 150%;
 }
+
+
 

@@ -95,11 +95,6 @@ a {
 }
 
 /*content*/
-.row {
-  display: flex;
-  flex-wrap: wrap; /* 允許換行 */
-}
-
 .container {
   width: 1300px;
   display: flex;
@@ -122,8 +117,6 @@ a {
   width: 100%;
   gap: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .blog-banner-img {
@@ -144,6 +137,39 @@ a {
 }
 
 /* Hero 區域樣式 */
+/* 右側背景圖區塊 */
+.hero-content {
+  width: 50%;
+  background-image: url("../images/desktop/index/Hero Section2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* 文字區塊 */
+.hero-text {
+  padding-left: 60px;
+  z-index: 1; /* 確保文字在背景圖上方 */
+}
+
+.hero-title {
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 150%;
+  color: #0027D5;
+  margin-bottom: 16px;
+}
+
+.hero-subtitle {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 150%;
+  color: #0027D5;
+}
+
 /* content 區域 2*/
 /* 特色卡片樣式 */
 .blog-card-featured {
@@ -155,6 +181,7 @@ a {
   padding: 0 32px; /* 左右加點內距 */
   gap: 16px;
   font-size: 16px;
+  line-height: 150%;
 }
 .blog-card-featured .blog-card-content {
   margin-bottom: 0;
@@ -200,6 +227,7 @@ a {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
+  line-height: 150%;
 }
 
 .blog-date {
@@ -232,14 +260,6 @@ a {
   -webkit-box-orient: vertical;
 }
 
-/* 關於區塊的特殊樣式 */
-.about-section {
-  background-color: #ffffff;
-}
-.about-section .blog-banner-img {
-  width: 50%; /* 左側圖片佔 50% */
-}
-
 .blog-button {
   width: 96px;
   height: 40px; /* 預設高度 40px */
@@ -264,6 +284,30 @@ a {
   border-color: #0027D5; /* 邊框顏色也改為藍色 */
 }
 
+/* Email & links icons */
+.email-link-wapper {
+  text-decoration: none; /* 移除底線 */
+  font-size: 16px;
+  height: 208px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px; /* 圖示與文字間距 */
+}
+
+.email {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 150%;
+  width: 1036px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*--footer*/
 .footer {
   width: 100%;
@@ -278,44 +322,31 @@ a {
 }
 
 /* 程式引入口 */
-.blog-banner {
+.pagination {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0; /* 上下留白 */
 }
-
-.blog-banner-img {
-  width: 50%;
-}
-
-/* 右側背景圖區塊 */
-.hero-content {
-  width: 50%;
-  background-image: url("../images/desktop/index/Hero Section2.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.pagination .page-list {
   display: flex;
-  position: relative;
+  align-items: center;
 }
-
-/* 文字區塊 */
-.hero-text {
-  padding-left: 60px;
-  z-index: 1;
+.pagination .page-item {
+  list-style: none; /* 移除列表項目符號 */
 }
-
-.hero-title {
-  font-size: 120px;
-  font-weight: 900;
-  line-height: 150%;
-  color: #0027D5;
-  margin-bottom: 16px;
+.pagination .page-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
+  font-size: 16px;
+  color: #4B4B4B;
+  text-decoration: none;
 }
-
-.hero-subtitle {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 150%;
-  color: #0027D5;
+.pagination .page-link i {
+  font-size: 24px;
 }
 
 /*# sourceMappingURL=main.css.map */
