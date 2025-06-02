@@ -299,8 +299,8 @@
 
     .header-menu {
         height: 60px;
-        font-size: 20px;
-        gap: 16px;
+        font-size: 28px;
+        gap: 48px;
     }
 
     .hero-content {
@@ -324,16 +324,14 @@
         font-size: 20px;
         line-height: 120%;
     }
+    .blog-list{
+        gap : 0px ;
+    }
 
     .blog-card {
         width: 100%;
         height: auto;
-        min-height: 320px;
-        margin-left : 8px;
-        margin-right : 8px;
-        img{
-            width: 100%;
-        }
+        margin: 32px 8px ;
     }
 
     .blog-card-title {
