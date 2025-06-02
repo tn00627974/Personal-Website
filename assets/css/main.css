@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* 程式引入口 */
 /* 主題:藍色*/
+/* 手機寬度 */
 /* 程式引入口 */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -67,6 +68,11 @@ a {
 }
 
 /* 程式引入口 */
+/* 是一個 CSS 屬性設定，用來改變瀏覽器計算元素寬度和高度的方式 */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* 共用 */
 .text-center {
   text-align: center;
@@ -264,13 +270,13 @@ a {
   width: 96px;
   height: 40px; /* 預設高度 40px */
   line-height: 40px; /* 配合高度 */
-  color: #4B4B4B;
   border-radius: 40px; /* 圓角 */
   text-decoration: none;
   border: 1px solid #000000;
   padding: 0 16px; /* 只需要左右內邊距 */
   text-align: center; /* 文字置中 */
   cursor: pointer; /* 滑鼠指標變為手形 */
+  background: white;
 }
 
 .small {
@@ -279,6 +285,7 @@ a {
 }
 
 .blog-button.blue {
+  width: 88px;
   color: #ffffff;
   background-color: #0027D5;
   border-color: #0027D5; /* 邊框顏色也改為藍色 */
@@ -321,6 +328,88 @@ a {
   line-height: 150%;
 }
 
+/* 📱 手機版樣式區塊 */
+@media (max-width: 375px) {
+  .blog-page,
+  .container,
+  .blog-list,
+  .blog-banner,
+  .blog-banner-img,
+  .blog-banner-text,
+  .email-link-wapper,
+  .blog-card-featured,
+  .blog-card-content {
+    width: 100%;
+    flex-direction: column;
+    padding: 0px;
+  }
+  .blog-card-featured {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .blog-card-featured .blog-card-content {
+    width: 100%;
+  }
+  .header {
+    padding: 0 16px;
+  }
+  .header-menu {
+    height: 60px;
+    font-size: 20px;
+    gap: 16px;
+  }
+  .hero-content {
+    width: 100%;
+    height: 180px;
+    background-image: url("../images/mobile/index/Hero Section2.png");
+  }
+  .hero-text {
+    padding-left: 20px;
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  .hero-title {
+    font-size: 48px;
+    line-height: 120%;
+  }
+  .hero-subtitle {
+    font-size: 20px;
+    line-height: 120%;
+  }
+  .blog-card {
+    width: 100%;
+    height: auto;
+    min-height: 320px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .blog-card img {
+    width: 100%;
+  }
+  .blog-card-title {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  .blog-card-content {
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 1.6; /* 取消行高限制 */
+  }
+  .email-link-wapper {
+    flex-direction: column;
+    padding: 0;
+  }
+  .email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+  .search-input {
+    width: 100%;
+    height: 38px;
+  }
+}
 /* 程式引入口 */
 .pagination {
   display: flex;
