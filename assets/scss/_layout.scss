@@ -37,7 +37,7 @@
 
 /*content*/
 .container{
-    width: 1300px;    
+    // width: 1300px;    
     display: flex;
     margin: 0 auto ;
     margin-top: 60px;
@@ -48,8 +48,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 32px 24px;    /* 上下間距32px，左右間距24px */
-    margin: 0 auto;
-    width: 1300px;
+    margin: 0 auto;    
+    max-width: 1300px; /* 最大寬度 */
+    width : 100%; /* 寬度自適應 */
     padding: 40px 0;    /* 上下留白 */
 }
 /* content 區域 1*/
@@ -87,14 +88,18 @@
     display: flex;
     align-items: center;
     position: relative;
-
-
 }
 
 /* 文字區塊 */
 .hero-text {
-  padding-left: 60px;
-  z-index: 1; /* 確保文字在背景圖上方 */
+    padding-left: 40px;
+    z-index: 1; /* 確保文字在背景圖上方 */
+    // max-width: 500px;
+    // width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero-title {
@@ -122,12 +127,19 @@
     align-items: flex-start;
     padding: 0 32px;  /* 左右加點內距 */
     gap: 16px;
-    font-size : $font-m;
+    // font-size : $font-m;
     line-height: 150%;    
     .blog-card-content {
         margin-bottom: 0;
-        width: 636px;
-    }    
+        max-width: 636px;
+        width: 100%; /* 確保內容寬度自適應 */
+        // width: 636px; 
+    }   
+    // @media (max-width: 768px) {
+    //   width: 25%; 
+    // // padding-left: 60px; /* 大於1200px時恢復原來的padding */            
+    // } 
+
 }
 
 
@@ -144,7 +156,7 @@
     border: 1px solid #ccc;
     outline: none;
     border-radius: 40px;   
-    font-size: $font-m; 
+    // font-size: $font-m; 
 }
 
 
@@ -234,7 +246,7 @@
 /* Email & links icons */
 .email-link-wapper {
     text-decoration: none; /* 移除底線 */
-    font-size: $font-m;
+    // font-size: $font-m;
     height: 208px;
     display: flex;
     justify-content: center;
@@ -246,7 +258,8 @@
     font-weight: 500;
     font-size: 32px;
     line-height: 150%;
-    width: 1036px;
+    max-width: 1036px;
+    width: 100%; /* 寬度自適應 */
 }
 
 .icons{
@@ -265,8 +278,58 @@
     align-items: center;
     justify-content: center;
     font-weight: 500;
-    font-size : $font-m;
+    // font-size : $font-m;
     line-height: 150%;
+}
+
+/* 平板樣式區塊 */
+@media (max-width: $tablet-width)
+{
+    .container,
+    .blog-banner, 
+    .hero-text,
+    .hero-title,
+    .hero-content,
+    .blog-banner-img,
+    .email-link-wapper{
+        width: 100%;
+        flex-direction: column;
+        padding : 0px; 
+    }
+    .container{
+        align-items: center; /* 平板上列表居中 */
+        justify-content: center; /* 平板上列表居中 */
+    }
+    .hero-text{
+        padding-left: 40px;
+        margin-bottom: 20px; /* 新增底部間距 */
+    }
+    .hero-title{
+        font-size: 80px; /* 平板上標題字體大小 */
+        line-height: 120%; /* 平板上行高 */
+    }
+    .hero-subtitle{
+        font-size : 24px; /* 平板上副標題字體大小 */
+        line-height: 120%; /* 平板上行高 */
+    }
+
+     .email-link-wapper{
+        flex-direction: column;
+        text-align: center; // 新增這行
+        padding: 0;
+    }
+    .blog-card-featured{
+        width: 100%; /* 平板上卡片寬度自適應 */
+        padding: 0 16px; /* 左右內距 */
+    }
+    .blog-list{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 16px; /* 平板上列表間距 */
+        align-items: center; /* 平板上列表居中 */
+        justify-content: center; /* 平板上列表居中 */
+    }
 }
 
 
@@ -283,14 +346,11 @@
     .blog-card-content {
         width: 100%;
         flex-direction: column;
-        padding : 0px;                
+        padding : 0px;    
     }
     .blog-card-featured{
         margin-left : 8px;
         margin-right : 8px;   
-        .blog-card-content{
-        width: 100%;  
-        }
     }
 
     .header {
@@ -305,14 +365,16 @@
 
     .hero-content {
         width: 100%;
-        height: 180px;
         background-image: url('../images/mobile/index/Hero Section2.png');
+        display: flex;
+        align-items: center;
+        position: relative;
     }
 
     .hero-text {
         padding-left: 20px;
         font-size: 20px;
-        margin-left : 20px;
+        margin-left : 20px; 
     }
 
     .hero-title {
@@ -324,6 +386,7 @@
         font-size: 20px;
         line-height: 120%;
     }
+
     .blog-list{
         gap : 0px ;
     }
@@ -349,12 +412,14 @@
         flex-direction: column;
         padding: 0;
     }
+
     .email {
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 20px;
     }
+
     .search-input {
         width: 100%;
         height: 38px;

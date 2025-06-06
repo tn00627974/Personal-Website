@@ -1,10 +1,13 @@
 $link-color: #a48cc4;
 $text-blue-color: #0027D5; /* 主題:藍色*/
 $font-s: 14px;
-$font-m: 16px;
+// $font-m: 16px; /*系統預設為16px(不使用)*/
 $font-l: 18px;
 $font-xl: 24px;
 $font-xxl: 32px;
 $font-family-base: "Noto Sans TC", sans-serif;
 $font-family-title: "Georgia", serif;
 $mobile-width: 375px; /* 手機寬度 */
+$tablet-width: 768px; /* 平板寬度 */
+$desktop-width: 1024px; /* 桌面寬度 */
+$desktop-lg-width: 1440px; /* 大桌面寬度 */

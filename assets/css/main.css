@@ -2,6 +2,9 @@
 /* 程式引入口 */
 /* 主題:藍色*/
 /* 手機寬度 */
+/* 平板寬度 */
+/* 桌面寬度 */
+/* 大桌面寬度 */
 /* 程式引入口 */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -102,7 +105,6 @@ a {
 
 /*content*/
 .container {
-  width: 1300px;
   display: flex;
   margin: 0 auto;
   margin-top: 60px;
@@ -114,7 +116,8 @@ a {
   flex-wrap: wrap;
   gap: 32px 24px; /* 上下間距32px，左右間距24px */
   margin: 0 auto;
-  width: 1300px;
+  max-width: 1300px; /* 最大寬度 */
+  width: 100%; /* 寬度自適應 */
   padding: 40px 0; /* 上下留白 */
 }
 
@@ -157,8 +160,12 @@ a {
 
 /* 文字區塊 */
 .hero-text {
-  padding-left: 60px;
+  padding-left: 40px;
   z-index: 1; /* 確保文字在背景圖上方 */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-title {
@@ -186,12 +193,12 @@ a {
   align-items: flex-start;
   padding: 0 32px; /* 左右加點內距 */
   gap: 16px;
-  font-size: 16px;
   line-height: 150%;
 }
 .blog-card-featured .blog-card-content {
   margin-bottom: 0;
-  width: 636px;
+  max-width: 636px;
+  width: 100%; /* 確保內容寬度自適應 */
 }
 
 /* content 區域 3*/
@@ -207,7 +214,6 @@ a {
   border: 1px solid #ccc;
   outline: none;
   border-radius: 40px;
-  font-size: 16px;
 }
 
 .icon {
@@ -294,7 +300,6 @@ a {
 /* Email & links icons */
 .email-link-wapper {
   text-decoration: none; /* 移除底線 */
-  font-size: 16px;
   height: 208px;
   display: flex;
   justify-content: center;
@@ -306,7 +311,8 @@ a {
   font-weight: 500;
   font-size: 32px;
   line-height: 150%;
-  width: 1036px;
+  max-width: 1036px;
+  width: 100%; /* 寬度自適應 */
 }
 
 .icons {
@@ -324,10 +330,56 @@ a {
   align-items: center;
   justify-content: center;
   font-weight: 500;
-  font-size: 16px;
   line-height: 150%;
 }
 
+/* 平板樣式區塊 */
+@media (max-width: 768px) {
+  .container,
+  .blog-banner,
+  .hero-text,
+  .hero-title,
+  .hero-content,
+  .blog-banner-img,
+  .email-link-wapper {
+    width: 100%;
+    flex-direction: column;
+    padding: 0px;
+  }
+  .container {
+    align-items: center; /* 平板上列表居中 */
+    justify-content: center; /* 平板上列表居中 */
+  }
+  .hero-text {
+    padding-left: 40px;
+    margin-bottom: 20px; /* 新增底部間距 */
+  }
+  .hero-title {
+    font-size: 80px; /* 平板上標題字體大小 */
+    line-height: 120%; /* 平板上行高 */
+  }
+  .hero-subtitle {
+    font-size: 24px; /* 平板上副標題字體大小 */
+    line-height: 120%; /* 平板上行高 */
+  }
+  .email-link-wapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+  .blog-card-featured {
+    width: 100%; /* 平板上卡片寬度自適應 */
+    padding: 0 16px; /* 左右內距 */
+  }
+  .blog-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 16px; /* 平板上列表間距 */
+    align-items: center; /* 平板上列表居中 */
+    justify-content: center; /* 平板上列表居中 */
+  }
+}
 /* 📱 手機版樣式區塊 */
 @media (max-width: 375px) {
   .blog-page,
@@ -347,9 +399,6 @@ a {
     margin-left: 8px;
     margin-right: 8px;
   }
-  .blog-card-featured .blog-card-content {
-    width: 100%;
-  }
   .header {
     padding: 0 16px;
   }
@@ -360,8 +409,10 @@ a {
   }
   .hero-content {
     width: 100%;
-    height: 180px;
     background-image: url("../images/mobile/index/Hero Section2.png");
+    display: flex;
+    align-items: center;
+    position: relative;
   }
   .hero-text {
     padding-left: 20px;
@@ -428,7 +479,6 @@ a {
   align-items: center;
   min-width: 40px;
   height: 40px;
-  font-size: 16px;
   color: #4B4B4B;
   text-decoration: none;
 }
