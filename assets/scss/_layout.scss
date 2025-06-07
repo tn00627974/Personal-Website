@@ -42,6 +42,13 @@
     margin: 0 auto ;
     margin-top: 60px;
     margin-bottom: 0px;
+        @media (max-width: $desktop-width) {
+        display : flex ;
+        align-items: center ;
+        justift-items : center ;
+    // .blog-search {
+        // margin: 0 auto; // 小於等於1300px時置中
+    }
 }
 
 .blog-list {
@@ -94,8 +101,6 @@
 .hero-text {
     padding-left: 40px;
     z-index: 1; /* 確保文字在背景圖上方 */
-    // max-width: 500px;
-    // width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -135,22 +140,25 @@
         width: 100%; /* 確保內容寬度自適應 */
         // width: 636px; 
     }   
-    // @media (max-width: 768px) {
-    //   width: 25%; 
-    // // padding-left: 60px; /* 大於1200px時恢復原來的padding */            
-    // } 
-
 }
-
 
 /* content 區域 3*/
 /* 搜尋區域樣式 */
 .blog-search {
-  position: relative;
-}
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto;   
+    display : flex ;
+    flex-direction: column;
+    @media (min-width: 1300px) {
+        width : 100% ;
+    }
+} 
+
+// }
 
 .search-input {
-    width: 366px; 
+    width: 416px; 
     height: 38px; /* 預設高度 48px */
     padding: 8px 12px 8px 36px; // 左邊預留 icon 空間
     border: 1px solid #ccc;
@@ -329,6 +337,10 @@
         gap: 16px; /* 平板上列表間距 */
         align-items: center; /* 平板上列表居中 */
         justify-content: center; /* 平板上列表居中 */
+    }
+    .email{
+        font-size: 24px; /* 平板上字體大小 */
+        line-height: 150%; /* 平板上行高 */
     }
 }
 

@@ -110,6 +110,13 @@ a {
   margin-top: 60px;
   margin-bottom: 0px;
 }
+@media (max-width: 1024px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justift-items: center;
+  }
+}
 
 .blog-list {
   display: flex;
@@ -205,10 +212,19 @@ a {
 /* 搜尋區域樣式 */
 .blog-search {
   position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1300px) {
+  .blog-search {
+    width: 100%;
+  }
 }
 
 .search-input {
-  width: 366px;
+  width: 416px;
   height: 38px; /* 預設高度 48px */
   padding: 8px 12px 8px 36px;
   border: 1px solid #ccc;
@@ -378,6 +394,10 @@ a {
     gap: 16px; /* 平板上列表間距 */
     align-items: center; /* 平板上列表居中 */
     justify-content: center; /* 平板上列表居中 */
+  }
+  .email {
+    font-size: 24px; /* 平板上字體大小 */
+    line-height: 150%; /* 平板上行高 */
   }
 }
 /* 📱 手機版樣式區塊 */
