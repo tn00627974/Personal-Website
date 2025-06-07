@@ -25,14 +25,14 @@
     width: 100%;
 }
 .header-menu{    
-    height: 90px;
     display: flex;
     justify-content: center;
     align-items : center;
     font-size : 28px;
     line-height: 150%;
     font-weight : 700; 
-    gap : 24px; /* 項目間距 */
+    gap : 40px; /* 項目間距 */
+    padding: 24px 0; /* 上下留白 */
 }
 
 /*content*/
@@ -73,16 +73,6 @@
     object-fit: cover;
 }
 
-.blog-banner-text{
-    width: 333px;
-    height: 234px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 12px;
-}
 
 /* Hero 區域樣式 */
 /* 右側背景圖區塊 */
@@ -159,11 +149,10 @@
 
 .search-input {
     width: 416px; 
-    height: 38px; /* 預設高度 48px */
-    padding: 8px 12px 8px 36px; // 左邊預留 icon 空間
+    padding: 19.5px 12px 19.5px 36px; // 左邊預留 icon 空間
     border: 1px solid #ccc;
     outline: none;
-    border-radius: 40px;   
+    border-radius: 40px;  /* 圓角 */
     // font-size: $font-m; 
 }
 
@@ -174,8 +163,6 @@
     left: 12px; /* 左邊距離 */
     transform: translateY(-50%); /* 垂直置中 */
     color: #888;
-    width: 24px;
-    height: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -228,24 +215,18 @@
 
 .blog-button {
     width: 96px;
-    height: 40px;             /* 預設高度 40px */
-    line-height: 40px;        /* 配合高度 */
+    line-height: 34px;        /* 配合高度 */
     border-radius: 40px;      /* 圓角 */
     text-decoration: none;
     border: 1px solid #000000;
-    padding: 0 16px;          /* 只需要左右內邊距 */
     text-align: center;       /* 文字置中 */
     cursor: pointer;          /* 滑鼠指標變為手形 */
     background : white;
-}
-
-.small {
-    height: 36px;             /* 小按鈕高度 36px */
-    line-height: 36px;        /* 配合高度 */
+    padding: 2px 0px;
 }
 
 .blog-button.blue {
-    width: 88px;
+    padding: 0 12px; /* 較小的左右內邊距，不寫死高度 */
     color: #ffffff;
     background-color: $text-blue-color;
     border-color: $text-blue-color;    /* 邊框顏色也改為藍色 */
@@ -254,12 +235,11 @@
 /* Email & links icons */
 .email-link-wapper {
     text-decoration: none; /* 移除底線 */
-    // font-size: $font-m;
-    height: 208px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 16px; /* 圖示與文字間距 */
+    padding: 80px 0px; /* 上下留白 */
 }
 
 .email{
@@ -280,14 +260,13 @@
 /*--footer*/
 .footer {
     width: 100%;
-    height: 72px;
     background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 500;
-    // font-size : $font-m;
     line-height: 150%;
+    padding : 24px 0px;
 }
 
 /* 平板樣式區塊 */
@@ -370,9 +349,9 @@
     }
 
     .header-menu {
-        height: 60px;
         font-size: 28px;
         gap: 48px;
+        padding: 24px 0; /* 上下留白 */
     }
 
     .hero-content {
@@ -434,7 +413,7 @@
 
     .search-input {
         width: 100%;
-        height: 38px;
+        padding : 19.5px 12px 19.5px 36px; /* 左邊預留 icon 空間 */
     }
 }
 
